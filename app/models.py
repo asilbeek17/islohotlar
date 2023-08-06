@@ -34,7 +34,9 @@ class Project(models.Model):
 
     image = models.ImageField(upload_to='Project/')
     title = models.CharField(max_length=155)
-    pdf = models.FileField(upload_to='PDF/')
+    pdf_uzbek_tilida = models.FileField(upload_to='PDF_uzb/')
+    pdf_rus_tilida = models.FileField(upload_to='PDF_rus/')
+    pdf_ingliz_tilida = models.FileField(upload_to='PDF_eng/')
     category = models.ForeignKey(to=Category, on_delete=models.CASCADE)
     price = models.CharField(max_length=155, choices=PriceChopice)
     description = models.TextField()
