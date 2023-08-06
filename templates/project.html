@@ -110,10 +110,16 @@
                     <div class="feature-box-1">
                         <img src="{{ project.image.url }}" width="" alt="">
                         <div class="feature-content">
-                            <h5>{{ project.title }}</h5>
+                            <h5>{{ project.title | slice:29 }} ...</h5>
                             <p>{{ project.description }}</p>
-                            <a href="{{ project.pdf.url }}">
+                            <a href="{{ project.pdf_uzbek_tilida.url }}">
                                 <button> <i class="bi bi-download"></i>&ensp;PDF ni yuklash</button>
+                            </a>
+                            <a href="{{ project.pdf_rus_tilida.url }}">
+                                <button> <i class="bi bi-download"></i>&ensp;Скачать PDF</button>
+                            </a>
+                            <a href="{{ project.pdf_ingliz_tilida.url }}">
+                                <button> <i class="bi bi-download"></i>&ensp;Download PDF</button>
                             </a>
                         </div>
                     </div>
