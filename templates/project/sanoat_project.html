@@ -93,7 +93,7 @@
     <div>
         <ul id="navbar">
             <li><a href="{% url 'index' %}">Asosiy</a></li>
-            <li><a class="active"  href="{% url 'project' %}">Loyihalar</a></li>
+            <li><a class="active" href="{% url 'project' %}">Loyihalar</a></li>
             <li><a href="{% url 'contact' %}">Bog'lanish</a></li>
             <a href="#" id="close"><i class="bi bi-x-circle"></i></a>
         </ul>
@@ -115,14 +115,14 @@
                                 <h5>{{ project.title | slice:29 }} ...</h5>
                                 <p>{{ project.description }}</p>
                                 <a href="{{ project.pdf_uzbek_tilida.url }}">
-                                <button> <i class="bi bi-download"></i>&ensp;PDF ni yuklash</button>
-                            </a>
-                            <a href="{{ project.pdf_rus_tilida.url }}">
-                                <button> <i class="bi bi-download"></i>&ensp;Скачать PDF</button>
-                            </a>
-                            <a href="{{ project.pdf_ingliz_tilida.url }}">
-                                <button> <i class="bi bi-download"></i>&ensp;Download PDF</button>
-                            </a>
+                                    <button><i class="bi bi-download"></i>&ensp;PDF ni yuklash</button>
+                                </a>
+                                <a href="{{ project.pdf_rus_tilida.url }}">
+                                    <button><i class="bi bi-download"></i>&ensp;Скачать PDF</button>
+                                </a>
+                                <a href="{{ project.pdf_ingliz_tilida.url }}">
+                                    <button><i class="bi bi-download"></i>&ensp;Download PDF</button>
+                                </a>
                             </div>
                         </div>
                     </div>
