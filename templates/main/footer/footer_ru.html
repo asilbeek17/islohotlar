@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Islohatlar</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/gerbnavbar.jpeg' %}">
+</head>
+<body>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>О нас</h6>
+                <p class="text-justify">Реформа – это любой аспект общественной жизни (процедуры,
+                    менять, реорганизовывать офисы, учреждения). Реформа официально
+                    какое новшество считается внедренным, когда его на самом деле называют реформой
+                    подразумевается более или менее продвинутая модификация. В обществе
+                    конечная цель социально-экономических преобразований определяется ситуацией
+                    важно правильно его определить.</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Проекты</h6>
+                <ul class="footer-links">
+                    <li><a href="{% url 'sanoat_project_ru' %}">Промышленные проекты</a></li>
+                    <li><a href="{% url 'qishloq_project_ru' %}">Сельскохозяйственные проекты</a></li>
+                    <li><a href="{% url 'xizmat_project_ru' %}">Сервисные проекты</a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Ссылки</h6>
+                <ul class="footer-links">
+                    <li><a href="{% url 'index_ru' %}">Основной</a></li>
+                    <li><a href="{% url 'contact' %}">Контакт</a></li>
+                    <li><a href="{% url 'project_ru' %}">Проекты</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2023 by IT CITY ACADEMY
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-telegram"></i></a></li>
+                    <li><a class="dribbble" href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="{% static 'js/index.js' %}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

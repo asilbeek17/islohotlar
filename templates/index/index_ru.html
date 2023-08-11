@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Islohatlar</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/gerbnavbar.jpeg' %}">
+</head>
+
+<body>
+{% include 'main/header/header_ru.html' %}
+<section id="body">
+    <div id="carouselExampleIndicators" class="carousel slide carusel_slide">
+        <img src="{% static 'img/image2.jpg' %}" alt="">
+    </div>
+</section>
+<h1 class="heading">Инвестиционные проекты</h1>
+<section id="body2">
+    <div class="opshi">
+        <div class="titlecard">
+            <li>$<a href="{% url 'sort_1_ru' %}"> 0.5 - 1 Миллион</a></li>
+            <li>$<a href="{% url 'sort_2_ru' %}"> 1 - 5 Миллион</a></li>
+            <li>$<a href="{% url 'sort_3_ru' %}"> 5 - 10 Миллион</a></li>
+            <li>$<a href="{% url 'sort_4_ru' %}"> 10 - 15 Миллион</a></li>
+            <li>$<a href="{% url 'sort_5_ru' %}"> 15 - 20 Миллион</a></li>
+            <li>$<a href="{% url 'sort_6_ru' %}"> 20 - 25 Миллион</a></li>
+            <li>$<a href="{% url 'sort_7_ru' %}"> 25 - 30 Миллион</a></li>
+            <li>$<a href="{% url 'sort_8_ru' %}"> 30 + Миллион</a></li>
+        </div>
+        {% for category in category %}
+            {% if category.title == "Промышленные проекты" %}
+                <a href="{% url 'sanoat_project_ru' %}" class="href">
+            {% elif category.title == "Сельскохозяйственные проекты" %}
+                <a href="{% url 'qishloq_project_ru' %}" class="href">
+            {% elif category.title == "Сервисные проекты" %}
+                <a href="{% url 'xizmat_project_ru' %}" class="href">
+            {% endif %}
+        <div class="card cardtitle" style="width: 20rem;">
+            <img
+                    src="{{ category.image.url }}"
+                    class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ category.title |slice:20 }} ...</h5>
+                <p class="card-text">{{ category.description | slice:152 }} ...</p>
+            </div>
+        </div>
+        </a>
+        {% endfor %}
+
+
+    </div>
+</section>
+
+{% include 'main/footer/footer_ru.html' %}
+
+
+<script src="{% static 'js/index.js' %}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+
+</html>
